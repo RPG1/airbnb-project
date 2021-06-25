@@ -1,6 +1,4 @@
-
-
-let array = [
+[
   {
     "city": "Helsinki",
     "country": "Finland",
@@ -145,100 +143,14 @@ let array = [
     "photo": "https://images.unsplash.com/photo-1519643381401-22c77e60520e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE3MzYxfQ&auto=format&fit=crop&w=2253&q=80"
   },
   {
-    "city": "Eilat",
-    "country": "Israel",
-    "superHost": true,
-    "title": "Nice 3 room apartment close to everything",
-    "rating": 5.21,
-    "maxGuests": 6,
-    "type": "Entire apartment",
-    "beds": 4,
-    "photo": "https://www.elal.com/magazine/wp-content/uploads/2018/06/Eilat-Travel-Information-1.jpg"
-  },
-  {
-    "city": "TLV",
-    "country": "Israel",
+    "city": "Turku",
+    "country": "israel",
     "superHost": true,
     "title": "Nice 2 room apartment close to everything",
     "rating": 4.34,
     "maxGuests": 6,
     "type": "Entire apartment",
     "beds": 3,
-    "photo": "https://digital.ihg.com/is/image/ihg/crowne-plaza-tel-aviv-6263930285-2x1?hei=480&fit=fit,1"
+    "photo": "https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1275&q=80"
   }
-];
-let get = document.querySelector('.btn1');
-
-get.addEventListener("change", load);
-
-
-function load(e) {
-  let divs = "";
-  let newArr = [];
-  if (e != undefined) {
-    newArr = array.filter((home) => {
-      return home.country == e.target.value;
-    });
-  } else {
-    newArr = array;
-  }
-
-  for (let i = 0; i < newArr.length; i++) {
-    let div = `        
-      <div class="air air-${i}">
-          <img src="${newArr[i].photo}" alt="" width="300px" height="300px" class="air-img">
-          <i class="fas fas fa-star" id="star">${newArr[i].rating}</i>
-          <p>country ${newArr[i].country}</p>
-          <p class="p1">superHost: ${newArr[i].type}</p>
-          <p>${newArr[i].title}</p>
-          <p>superHost: ${newArr[i].superHost}</p>
-          <p>city: ${newArr[i].city}</p>
-      </div>
-  `;
-    divs += div;
-  }
-  let t2 = document.querySelector('.main-air');
-
-  t2.innerHTML = divs;
-
-
-}
-
-let t = document.querySelector('.form-search');
-
-t.addEventListener("submit", sub);
-
-function sub(e) {
-  let divsnew = "";
-  let newr = [];
-  e.preventDefault();
-  let a = document.querySelector('[name=add]').value;
-
-  console.log(e);
-
-  if (e != undefined) {
-    newr = array.filter((item) => {
-      return item.country == "Israel";
-    });
-
-    for (let i = 0; i < newr.length; i++) {
-      let div = `        
-        <div class="air air-${i}">
-            <img src="${newr[i].photo}" alt="" width="300px" height="300px" class="air-img">
-            <i class="fas fas fa-star" id="star">${newr[i].rating}</i>
-            <p>country ${newr[i].country}</p>
-            <p class="p1">superHost: ${newr[i].type}</p>
-            <p>${newr[i].title}</p>
-            <p>superHost: ${newr[i].superHost}</p>
-            <p>city: ${newr[i].city}</p>
-        </div>
-    `;
-      divsnew += div;
-    }
-    let t2 = document.querySelector('.main-air');
-  
-    t2.innerHTML = divsnew;
-
-    let as = document.querySelector('[name=add]').value = "";
-  }
-}
+]

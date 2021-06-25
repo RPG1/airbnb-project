@@ -80,6 +80,34 @@ span {
 
 .btn1 {
     position: relative;
-    /* left: -27px; */
     height: 48px;
+}
+
+.isreal {
+}
+
+.adult {
+    border: 1px solo #fff;
+    background: wheat;
+    float: right;
+    position: relative;
+    left: -227px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+.adult p {
+    position: relative;
+    top: -13px;
+}
+
+.adult .a {
+    position: relative;
+    top: -79px;
+}
+
+.adult .b {
+    position: relative;
+    top: -74px;
+    left: 38px;
 }
